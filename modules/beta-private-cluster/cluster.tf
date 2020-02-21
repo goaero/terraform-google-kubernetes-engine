@@ -380,15 +380,6 @@ resource "null_resource" "wait_for_cluster" {
     name       = var.name
   }
 
-  provisioner "local-exec" {
-    command = "${path.module}/scripts/wait-for-cluster.sh ${self.triggers.project_id} ${self.triggers.name}"
-  }
-
-  provisioner "local-exec" {
-    when    = destroy
-    command = "${path.module}/scripts/wait-for-cluster.sh ${self.triggers.project_id} ${self.triggers.name}"
-  }
-
   depends_on = [
     google_container_cluster.primary,
     google_container_node_pool.pools,
