@@ -16,6 +16,8 @@
 
 set -e
 
+alias kubectl="/home/terraform/bin/kubectl"
+
 if [ "$#" -lt 3 ]; then
     >&2 echo "Not all expected arguments set."
     exit 1
