@@ -15,8 +15,6 @@
 
 set -e
 
-alias gcloud="/home/terraform/bin/gcloud"
-
 # shellcheck disable=SC2034
 if [ -n "${GOOGLE_APPLICATION_CREDENTIALS}" ]; then
     export CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE="${GOOGLE_APPLICATION_CREDENTIALS}"
