@@ -55,7 +55,7 @@ EOF
   }
 
   depends_on = [
-    null_resource.delete_default_kube_dns_configmap,
+#    null_resource.delete_default_kube_dns_configmap,
     data.google_client_config.default,
     google_container_cluster.primary,
     google_container_node_pool.pools,
@@ -82,7 +82,7 @@ EOF
   }
 
   depends_on = [
-    null_resource.delete_default_kube_dns_configmap,
+#    null_resource.delete_default_kube_dns_configmap,
     data.google_client_config.default,
     google_container_cluster.primary,
     google_container_node_pool.pools,
@@ -112,7 +112,7 @@ EOF
   }
 
   depends_on = [
-    null_resource.delete_default_kube_dns_configmap,
+#    null_resource.delete_default_kube_dns_configmap,
     data.google_client_config.default,
     google_container_cluster.primary,
     google_container_node_pool.pools,
