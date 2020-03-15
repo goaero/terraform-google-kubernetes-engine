@@ -16,8 +16,6 @@
 
 set -e
 
-alias kubectl="/home/terraform/bin/kubectl"
-alias jq="/home/terraform/bin/jq"
 if [ "$#" -ne 3 ]; then
     >&2 echo "3 arguments expected. Exiting."
     exit 1
