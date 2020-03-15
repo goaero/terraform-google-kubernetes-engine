@@ -444,4 +444,17 @@ resource "google_container_node_pool" "pools" {
     delete = "45m"
   }
 }
-    
+
+# resource "null_resource" "wait_for_cluster" {
+#   count = var.skip_provisioners ? 0 : 1
+
+#   triggers = {
+#     project_id = var.project_id
+#     name       = var.name
+#   }
+
+#   depends_on = [
+#     google_container_cluster.primary,
+#     google_container_node_pool.pools,
+#   ]
+# }

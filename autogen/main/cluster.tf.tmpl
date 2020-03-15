@@ -493,16 +493,16 @@ resource "google_container_node_pool" "pools" {
   }
 }
 
-resource "null_resource" "wait_for_cluster" {
-  count = var.skip_provisioners ? 0 : 1
+# resource "null_resource" "wait_for_cluster" {
+#   count = var.skip_provisioners ? 0 : 1
 
-  triggers = {
-    project_id = var.project_id
-    name       = var.name
-  }
+#   triggers = {
+#     project_id = var.project_id
+#     name       = var.name
+#   }
 
-  depends_on = [
-    google_container_cluster.primary,
-    google_container_node_pool.pools,
-  ]
-}
+#   depends_on = [
+#     google_container_cluster.primary,
+#     google_container_node_pool.pools,
+#   ]
+# }
